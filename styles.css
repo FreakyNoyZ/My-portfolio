@@ -1,0 +1,277 @@
+ :root {
+    --text-color: #000000;
+    --link-color: #FFA500;
+    --background-color: #ffffff;
+ }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;   
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Tabsbar */
+tabsbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px ;
+    height: 80px;
+}
+
+tabsbar .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+tabsbar .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+
+tabsbar .right a:last-child {
+    color: var(--background-color);
+    background-color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Headshot */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.intro .text {
+    flex: 5;
+}
+
+.intro .text h2 {
+    font-size: 45px;
+}
+
+.intro .text .links {
+    margin: 25px;
+}
+
+.intro .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+
+.intro .text .links a:hover {
+    color: coral;
+    border: 2px solid coral;
+    background-color: rgba(255, 127, 80, 0.103);
+
+}
+
+.intro .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+
+.intro .headshot img {
+    width: 350px;
+    border-radius: 50%;
+}
+
+/*Skills Section*/
+
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 300px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 1.5px solid #d3d3d3; 
+    border-radius: 5px;
+    
+}
+
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+    font-size: 18px;
+}
+
+
+/* Projects Section */
+
+.projects-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.projects-section .projects-text {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.video-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.video-card {
+    width: 400px;
+    border: 1.5px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.video-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 850px) {
+    /* Intro */
+    .intro .text h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 740px) {
+    /* Intro */
+    .intro {
+        flex-direction: column-reverse;
+    }
+
+    .intro .headshot img {
+        width: 300px;
+
+    }
+
+}
+
+
+@media (max-width: 674px) {
+
+    /* Tabsbar */
+    tabsbar {
+        padding: 0 20px;
+    }
+
+    tabsbar .right a:last-child {
+        color: var(--text-color);
+        background-color: var(--background-color);
+        padding: 0;
+    }
+
+    
+    tabsbar .right a span {
+        display: none;
+    }
+
+    /* Intro */
+    .intro {
+        padding: 0 20px;
+    }
+
+    .intro .text h2 {
+        font-size: 30px;
+    }
+
+    /*Skills Section*/
+    .skills-section {
+        padding: 0 20px;
+
+    }
+
+    .skills-section .cells .cell span {
+        font-size: 16px;
+        
+    }
+
+    /* Projects Section */
+    @media (max-width: 674px) {
+    .projects-section {
+        padding: 0 20px;
+    }
+
+    .video-card {
+        width: 100%;
+    }
+}
+    
+}
